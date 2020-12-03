@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import Tweet from './Components/Tweet'
+
+const data = {
+  message: 'React is awesome!',
+  gravatar: '64cf179feb1a8fd72801f4f1986bdb47',
+  author: {
+    handle: 'kevingmc_',
+    name: 'Kevin McCallum',
+  },
+  likes: 10,
+  retweets: 20,
+  timestamp: '2020-12-02 21:24:37',
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Tweet tweet={data} />
   </React.StrictMode>,
   document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+)
